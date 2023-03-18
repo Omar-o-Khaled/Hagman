@@ -1,0 +1,121 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    background: #34495e;
+    color: white;
+    height: 100vh;
+}
+.container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+h1{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+h1 + p{
+    padding-bottom: 60px;
+}
+.figure-container{
+    stroke: white;
+    stroke-width: 4px;
+    stroke-linecap: round;
+    fill: transparent;
+}
+.figure-part{
+    display: block;
+}
+.wrongContainer{
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+.wrongContainer p{
+    text-transform: capitalize;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.word{
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+}
+.word span{
+    /* margin-left: 15px; */
+    border-bottom: 3px solid #2980b9;
+    display: block;
+    width: 20px;
+    text-align: center;
+    padding-bottom: 5px;
+    font-size: 20px;
+}
+.popup{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #0000007d;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* backdrop-filter: blur(2px); */
+    z-index: 100;
+}
+.showPopup{
+    display: flex;
+}
+.popupcontainer{
+    background: #0d68b1;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    border-radius: 10px;
+}
+.popupHeading{
+    background: #0d68b1;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+}
+.play{
+    padding: 10px 20px;
+    font-size: 20px;
+    background: white;
+    color: #0d68b1;
+    border: 0;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.exist{
+    width: fit-content;
+    background: #0000008f;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,100%);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    backdrop-filter: blur(3px);
+    transition-duration: .2s;
+}
+.existShow{
+    transform: translate(-50%,0);
+}
